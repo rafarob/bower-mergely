@@ -683,14 +683,14 @@ jQuery.extend(Mgly.CodeMirrorDiffView.prototype, {
 		this.current_diff_color = color;
 
 		// codemirror
-		var cmstyle = '#' + this.id + ' .CodeMirror-gutter-text { padding: 5px 0 0 0; }' +
-			'#' + this.id + ' .CodeMirror-lines pre, ' + '#' + this.id + ' .CodeMirror-gutter-text pre { line-height: 18px; }' +
-			'.CodeMirror-linewidget { overflow: hidden; };';
+		var cmstyle = '#' + this.id + ' .CodeMirror-gutter-text { padding: 5px 0 0 0; }\n' +
+			'#' + this.id + ' .CodeMirror-lines pre, ' + '#' + this.id + ' .CodeMirror-gutter-text pre { line-height: 18px; }\n' +
+			'#' + this.id + ' .CodeMirror-linewidget { overflow: hidden; }\n';
 		if (this.settings.autoresize) {
-			cmstyle += this.id + ' .CodeMirror-scroll { height: 100%; overflow: auto; }';
+			cmstyle += '#' + this.id + ' .CodeMirror-scroll { height: 100%; overflow: auto; }\n';
 		}
 		// adjust the margin line height
-		cmstyle += '\n.CodeMirror { line-height: 18px; }';
+		cmstyle += '#' + this.id + ' .CodeMirror { line-height: 18px; }';
 		jQuery('<style type="text/css">' + cmstyle + '</style>').appendTo('head');
 
 		//bind

@@ -41,5 +41,5 @@
 .mergely.current.lhs.a.start.end,
 .mergely.current.rhs.d.start.end { border-top: 0 !important; }
 .mergely.current.CodeMirror-linenumber { color: #F9F9F9; font-weight: bold; background-color: #777; }
-.CodeMirror-linenumber { cursor: pointer; }
-.CodeMirror-code { color: #717171; }
+.mergely-column .CodeMirror-linenumber { cursor: pointer; }
+.mergely-column .CodeMirror-code { color: #717171; }
